@@ -1,0 +1,186 @@
+/* ============================================================
+   VoltGrid EV Charging — RTL Overrides
+   Applied when <html dir="rtl"> is set
+   ============================================================ */
+
+[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+/* ── Navigation ── */
+[dir="rtl"] .nav-drawer {
+  inset-inline-end: auto;
+  inset-inline-start: -340px;
+  border-inline-start: none;
+  border-inline-end: 1px solid var(--color-border);
+}
+
+[dir="rtl"] .nav-drawer.open {
+  inset-inline-start: 0;
+}
+
+/* ── About badge float ── */
+[dir="rtl"] .about-badge-float {
+  inset-inline-end: auto;
+  inset-inline-start: -24px;
+}
+
+/* ── Sidebar ── */
+[dir="rtl"] .sidebar {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+  border-inline-end: none;
+  border-inline-start: 1px solid var(--color-border);
+}
+
+[dir="rtl"] .dashboard-main {
+  margin-inline-start: 0;
+  margin-inline-end: 260px;
+}
+
+@media (max-width: 1024px) {
+  [dir="rtl"] .sidebar {
+    transform: translateX(100%);
+  }
+  [dir="rtl"] .sidebar.open {
+    transform: translateX(0);
+  }
+  [dir="rtl"] .dashboard-main {
+    margin-inline-end: 0;
+  }
+}
+
+/* ── Timeline ── */
+[dir="rtl"] .timeline {
+  padding-inline-start: 0;
+  padding-inline-end: var(--space-4);
+}
+
+[dir="rtl"] .timeline::before {
+  inset-inline-start: auto;
+  inset-inline-end: 16px;
+}
+
+[dir="rtl"] .timeline-item {
+  padding-inline-start: 0;
+  padding-inline-end: var(--space-4);
+}
+
+[dir="rtl"] .timeline-item::before {
+  inset-inline-start: auto;
+  inset-inline-end: -7px;
+}
+
+/* ── Blog single blockquote ── */
+[dir="rtl"] .blog-single-body blockquote {
+  border-inline-start: none;
+  border-inline-end: 3px solid var(--color-primary);
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+}
+
+/* ── Sidebar link active indicator ── */
+[dir="rtl"] .sidebar-link.active {
+  border-inline-start: none;
+  border-inline-end: 2px solid var(--color-primary);
+}
+
+/* ── Footer links hover ── */
+[dir="rtl"] .footer-link:hover {
+  padding-inline-start: 0;
+  padding-inline-end: 4px;
+}
+
+/* ── Steps connector (hidden in RTL, reconnected via JS if needed) ── */
+[dir="rtl"] .steps-grid::before {
+  transform: scaleX(-1);
+}
+
+/* ── Partners marquee ── */
+[dir="rtl"] .partners-scroll {
+  animation-direction: reverse;
+}
+
+/* ── Card top border ── */
+[dir="rtl"] .service-card::before {
+  transform-origin: inline-end;
+}
+
+/* ── Section label ── */
+[dir="rtl"] .section-label {
+  flex-direction: row-reverse;
+}
+
+/* ── Service link ── */
+[dir="rtl"] .service-link {
+  flex-direction: row-reverse;
+}
+
+/* ── Scroll indicator ── */
+[dir="rtl"] .scroll-indicator {
+  inset-inline-start: auto;
+  inset-inline-end: 50%;
+  transform: translateX(50%);
+}
+
+/* ── Hero 2 left padding ── */
+[dir="rtl"] .hero-2-left {
+  padding: var(--space-7) var(--space-4) var(--space-7) var(--space-6);
+}
+
+/* ── Drawer animations ── */
+[dir="rtl"] .nav-drawer {
+  transition: inset-inline-start 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Contact cards ── */
+[dir="rtl"] .contact-card {
+  text-align: right;
+}
+
+/* ── About points ── */
+[dir="rtl"] .about-point {
+  text-align: right;
+}
+
+/* ── Breadcrumb ── */
+[dir="rtl"] .breadcrumb {
+  flex-direction: row-reverse;
+}
+
+/* ── KPI change icon ── */
+[dir="rtl"] .kpi-change {
+  flex-direction: row-reverse;
+}
+
+/* ── Data table ── */
+[dir="rtl"] .data-table th,
+[dir="rtl"] .data-table td {
+  text-align: right;
+}
+
+/* ── Auth card ── */
+[dir="rtl"] .auth-card {
+  text-align: right;
+}
+[dir="rtl"] .auth-divider {
+  flex-direction: row-reverse;
+}
+
+/* ── Form checkbox ── */
+[dir="rtl"] .form-checkbox {
+  flex-direction: row-reverse;
+}
+
+/* ── Blog card tag ── */
+[dir="rtl"] .blog-card-tag {
+  inset-inline-start: auto;
+  inset-inline-end: var(--space-2);
+}
+
+/* ── Scroll mouse indicator ── */
+[dir="rtl"] .scroll-mouse::after {
+  inset-inline-start: auto;
+  inset-inline-end: 50%;
+  transform: translateX(50%);
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — VoltGrid EV Charging News & Insights</title>
+  <meta name="description" content="Stay up to date with VoltGrid's latest articles on EV charging technology, sustainability, fleet management, V2G, and electric mobility news." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <style>
+    .blog-filter-btn {
+      padding: 0.45rem 1.1rem;
+      border-radius: var(--radius-pill);
+      font-size: var(--size-caption);
+      font-weight: var(--weight-label);
+      font-family: var(--font-mono);
+      border: 1.5px solid var(--color-border);
+      color: var(--color-text-muted);
+      background: transparent;
+      cursor: pointer;
+      transition: all var(--transition);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .blog-filter-btn:hover,
+    .blog-filter-btn.active {
+      background: var(--color-primary);
+      color: #050D1A;
+      border-color: var(--color-primary);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container"><div class="nav-inner">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><i class="ph ph-lightning"></i></div><span class="nav-logo-text">VoltGrid</span></a>
+      <ul class="nav-links"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="home2.html" class="nav-link">Home 2</a></li><li><a href="services.html" class="nav-link">Services</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="blog.html" class="nav-link active">Blog</a></li><li><a href="contact.html" class="nav-link">Contact</a></li><li><a href="dashboard.html" class="nav-link">Dashboard</a></li></ul>
+      <div class="nav-actions"><button class="btn-rtl" aria-label="Toggle RTL"><i class="ph ph-arrows-left-right"></i></button><button class="btn-theme" aria-label="Toggle theme"><i class="ph ph-moon"></i></button><a href="login.html" class="btn-login">Login</a><button class="btn-hamburger" aria-label="Open menu"><i class="ph ph-list"></i></button></div>
+    </div></div>
+  </nav>
+  <div class="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="drawer-header"><a href="index.html" class="nav-logo"><div class="nav-logo-icon"><i class="ph ph-lightning"></i></div><span class="nav-logo-text">VoltGrid</span></a><button class="btn-drawer-close" aria-label="Close"><i class="ph ph-x"></i></button></div>
+    <nav class="drawer-links"><a href="index.html" class="drawer-link"><i class="ph ph-house"></i> Home</a><a href="home2.html" class="drawer-link"><i class="ph ph-layout"></i> Home 2</a><a href="services.html" class="drawer-link"><i class="ph ph-briefcase"></i> Services</a><a href="about.html" class="drawer-link"><i class="ph ph-info"></i> About</a><a href="blog.html" class="drawer-link active"><i class="ph ph-newspaper"></i> Blog</a><a href="contact.html" class="drawer-link"><i class="ph ph-envelope"></i> Contact</a><a href="dashboard.html" class="drawer-link"><i class="ph ph-squares-four"></i> Dashboard</a></nav>
+    <div class="drawer-footer"><span class="drawer-label">Preferences</span><div class="drawer-actions"><button class="btn-theme"><i class="ph ph-moon"></i></button><button class="btn-rtl"><i class="ph ph-arrows-left-right"></i></button><a href="login.html" class="btn btn-primary btn-sm" style="margin-inline-start:auto">Login</a></div></div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="blog-page-heading">
+      <div class="page-hero-content container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span>Blog</span></nav>
+        <span class="section-label" style="justify-content:center">VoltGrid Lab</span>
+        <h1 id="blog-page-heading">Insights on <span class="text-gradient">Electric Mobility</span></h1>
+        <p>Deep dives into charging technology, sustainability, fleet electrification, and the future of clean transport.</p>
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="section" aria-labelledby="blog-articles-heading">
+      <div class="container">
+
+        <!-- Filter Bar -->
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;margin-block-end:var(--space-4);" role="group" aria-label="Filter articles by category">
+          <h2 class="sr-only" id="blog-articles-heading">All Articles</h2>
+          <button class="blog-filter-btn active" data-filter="all">All</button>
+          <button class="blog-filter-btn" data-filter="technology">Technology</button>
+          <button class="blog-filter-btn" data-filter="sustainability">Sustainability</button>
+          <button class="blog-filter-btn" data-filter="fleet">Fleet</button>
+          <button class="blog-filter-btn" data-filter="industry">Industry News</button>
+          <button class="blog-filter-btn" data-filter="guides">Guides</button>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="blog-grid">
+          <article class="blog-card-wrap reveal" data-category="technology">
+            <div class="blog-card">
+              <div class="blog-card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80" alt="Solid-state battery technology" class="blog-card-image" loading="lazy" />
+                <span class="blog-card-tag">Technology</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span>Dec 12, 2025</span><span class="blog-meta-sep">·</span><span>6 min</span></div>
+                <h3 class="blog-card-title">Solid-State Batteries: How They'll Change EV Charging Forever</h3>
+                <p class="blog-card-excerpt">The next generation of battery technology promises 10-minute full charges. We explore what this means for the charging network of tomorrow.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-author"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=56&q=80" alt="Alex Kim" class="blog-author-img" loading="lazy" /><span class="blog-author-name">Alex Kim</span></div>
+                  <a href="blog-single.html" class="service-link" style="font-size:var(--size-caption)">Read <i class="ph ph-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card-wrap reveal reveal-delay-1" data-category="sustainability">
+            <div class="blog-card">
+              <div class="blog-card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=600&q=80" alt="Solar panels and electric vehicle" class="blog-card-image" loading="lazy" />
+                <span class="blog-card-tag">Sustainability</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span>Nov 28, 2025</span><span class="blog-meta-sep">·</span><span>4 min</span></div>
+                <h3 class="blog-card-title">V2G Technology: Turn Your EV Into a Mobile Power Plant</h3>
+                <p class="blog-card-excerpt">Vehicle-to-Grid is no longer science fiction. Here's how VoltGrid users are selling power back to the grid and earning money while parked.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-author"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=56&q=80" alt="Priya Singh" class="blog-author-img" loading="lazy" /><span class="blog-author-name">Priya Singh</span></div>
+                  <a href="blog-single.html" class="service-link" style="font-size:var(--size-caption)">Read <i class="ph ph-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card-wrap reveal reveal-delay-2" data-category="fleet">
+            <div class="blog-card">
+              <div class="blog-card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Electric delivery fleet" class="blog-card-image" loading="lazy" />
+                <span class="blog-card-tag">Fleet</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span>Nov 15, 2025</span><span class="blog-meta-sep">·</span><span>8 min</span></div>
+                <h3 class="blog-card-title">How DHL Electrified 400 Delivery Vans Using VoltGrid Fleet</h3>
+                <p class="blog-card-excerpt">A deep dive into the real-world numbers behind one of Europe's largest commercial EV fleet transitions and what others can learn.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-author"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=56&q=80" alt="Tom Bradley" class="blog-author-img" loading="lazy" /><span class="blog-author-name">Tom Bradley</span></div>
+                  <a href="blog-single.html" class="service-link" style="font-size:var(--size-caption)">Read <i class="ph ph-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card-wrap reveal" data-category="industry">
+            <div class="blog-card">
+              <div class="blog-card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&q=80" alt="EV market growth 2025" class="blog-card-image" loading="lazy" />
+                <span class="blog-card-tag">Industry News</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span>Oct 30, 2025</span><span class="blog-meta-sep">·</span><span>5 min</span></div>
+                <h3 class="blog-card-title">Global EV Sales Hit 30 Million in 2025 — The Tipping Point Has Arrived</h3>
+                <p class="blog-card-excerpt">Electric vehicles now outsell combustion engines in 12 countries. What does this mean for charging infrastructure demand?</p>
+                <div class="blog-card-footer">
+                  <div class="blog-author"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=56&q=80" alt="Elena Rodriguez" class="blog-author-img" loading="lazy" /><span class="blog-author-name">Elena Rodriguez</span></div>
+                  <a href="blog-single.html" class="service-link" style="font-size:var(--size-caption)">Read <i class="ph ph-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card-wrap reveal reveal-delay-1" data-category="guides">
+            <div class="blog-card">
+              <div class="blog-card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Home EV charger installation guide" class="blog-card-image" loading="lazy" />
+                <span class="blog-card-tag">Guides</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span>Oct 18, 2025</span><span class="blog-meta-sep">·</span><span>12 min</span></div>
+                <h3 class="blog-card-title">The Complete Guide to Home EV Charger Installation in 2025</h3>
+                <p class="blog-card-excerpt">Everything you need to know: electrical panel requirements, permits, costs, and choosing the right charger for your EV and home setup.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-author"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=56&q=80" alt="David Park" class="blog-author-img" loading="lazy" /><span class="blog-author-name">David Park</span></div>
+                  <a href="blog-single.html" class="service-link" style="font-size:var(--size-caption)">Read <i class="ph ph-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card-wrap reveal reveal-delay-2" data-category="technology">
+            <div class="blog-card">
+              <div class="blog-card-image-wrap">
+                <img src="https://images.unsplash.com/photo-1620714223084-8fcacc2dbe4d?w=600&q=80" alt="Wireless EV charging technology" class="blog-card-image" loading="lazy" />
+                <span class="blog-card-tag">Technology</span>
+              </div>
+              <div class="blog-card-body">
+                <div class="blog-meta"><span>Sep 22, 2025</span><span class="blog-meta-sep">·</span><span>7 min</span></div>
+                <h3 class="blog-card-title">Wireless EV Charging: Are We Finally There? A Technical Deep Dive</h3>
+                <p class="blog-card-excerpt">Inductive charging has moved from research labs to public roads. We test the latest systems and compare efficiency to traditional wired charging.</p>
+                <div class="blog-card-footer">
+                  <div class="blog-author"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=56&q=80" alt="Aisha Patel" class="blog-author-img" loading="lazy" /><span class="blog-author-name">Aisha Patel</span></div>
+                  <a href="blog-single.html" class="service-link" style="font-size:var(--size-caption)">Read <i class="ph ph-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pagination -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:0.5rem;margin-block-start:var(--space-5);">
+          <button class="carousel-btn" aria-label="Previous page"><i class="ph ph-caret-left"></i></button>
+          <button style="width:36px;height:36px;border-radius:var(--radius-sm);border:none;background:var(--color-primary);color:#050D1A;font-weight:600;font-family:var(--font-mono);cursor:pointer;">1</button>
+          <button style="width:36px;height:36px;border-radius:var(--radius-sm);border:1px solid var(--color-border);background:transparent;color:var(--color-text-muted);font-family:var(--font-mono);cursor:pointer;transition:all var(--transition);">2</button>
+          <button style="width:36px;height:36px;border-radius:var(--radius-sm);border:1px solid var(--color-border);background:transparent;color:var(--color-text-muted);font-family:var(--font-mono);cursor:pointer;transition:all var(--transition);">3</button>
+          <span style="color:var(--color-text-subtle);font-family:var(--font-mono);">...</span>
+          <button class="carousel-btn" aria-label="Next page"><i class="ph ph-caret-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="VoltGrid Home">
+            <div class="nav-logo-icon"><i class="ph ph-lightning"></i></div>
+            <span class="nav-logo-text">VoltGrid</span>
+          </a>
+          <p class="footer-desc">The world's most advanced EV charging network. Powering clean mobility across 48 countries.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer-social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About VoltGrid</a></li>
+            <li><a href="services.html" class="footer-link">Our Services</a></li>
+            <li><a href="blog.html" class="footer-link">News & Blog</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="about.html#team" class="footer-link">Leadership Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Solutions</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#service-home" class="footer-link">Home Charging</a></li>
+            <li><a href="services.html#service-dc-fast" class="footer-link">DC Fast Charging</a></li>
+            <li><a href="services.html#service-fleet" class="footer-link">Fleet Management</a></li>
+            <li><a href="services.html#service-solar" class="footer-link">Solar Integration</a></li>
+            <li><a href="services.html#service-business" class="footer-link">Business Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Support</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Help Center</a></li>
+            <li><a href="home2.html#map-section" class="footer-link">Network Status</a></li>
+            <li><a href="contact.html#faq-heading" class="footer-link">Installation Guide</a></li>
+            <li><a href="contact.html" class="footer-link">Technical Support</a></li>
+            <li><a href="contact.html" class="footer-link">24/7 Hotline</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 VoltGrid Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

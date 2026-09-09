@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoltGrid — Home 2 | Alternative EV Charging Showcase</title>
+  <meta name="description" content="Explore VoltGrid's charging network with an interactive map view, step-by-step process guide, and transparent pricing plans." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="VoltGrid Home">
+          <div class="nav-logo-icon"><i class="ph ph-lightning"></i></div>
+          <span class="nav-logo-text">VoltGrid</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link active">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="btn-rtl" aria-label="Toggle RTL direction"><i class="ph ph-arrows-left-right"></i></button>
+          <button class="btn-theme" aria-label="Toggle theme"><i class="ph ph-moon"></i></button>
+          <a href="login.html" class="btn-login">Login</a>
+          <button class="btn-hamburger" aria-label="Open menu" aria-expanded="false"><i class="ph ph-list"></i></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay"></div>
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <a href="index.html" class="nav-logo"><div class="nav-logo-icon"><i class="ph ph-lightning"></i></div><span class="nav-logo-text">VoltGrid</span></a>
+      <button class="btn-drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html" class="drawer-link"><i class="ph ph-house"></i> Home</a>
+      <a href="home2.html" class="drawer-link active"><i class="ph ph-layout"></i> Home 2</a>
+      <a href="services.html" class="drawer-link"><i class="ph ph-briefcase"></i> Services</a>
+      <a href="about.html" class="drawer-link"><i class="ph ph-info"></i> About</a>
+      <a href="blog.html" class="drawer-link"><i class="ph ph-newspaper"></i> Blog</a>
+      <a href="contact.html" class="drawer-link"><i class="ph ph-envelope"></i> Contact</a>
+      <a href="dashboard.html" class="drawer-link"><i class="ph ph-squares-four"></i> Dashboard</a>
+    </nav>
+    <div class="drawer-footer">
+      <span class="drawer-label">Preferences</span>
+      <div class="drawer-actions">
+        <button class="btn-theme"><i class="ph ph-moon"></i></button>
+        <button class="btn-rtl"><i class="ph ph-arrows-left-right"></i></button>
+        <a href="login.html" class="btn btn-primary btn-sm" style="margin-inline-start:auto">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ── HERO 2 — SPLIT LAYOUT + PARALLAX ── -->
+    <section class="hero-2" aria-labelledby="hero2-heading">
+      <div class="hero-2-left">
+        <!-- BG Grid -->
+        <div class="hero-grid-bg" style="position:absolute;inset:0;z-index:0;pointer-events:none;" aria-hidden="true"></div>
+        <div style="position:relative;z-index:1;">
+          <div class="hero-badge" style="display:inline-flex; animation: fadeInDown 0.8s ease both;">
+            <span class="pulse"></span>
+            New: V2G Bidirectional Charging Available
+          </div>
+          <h1 class="hero-h1" id="hero2-heading" style="text-align:start; animation: fadeInUp 0.9s ease 0.2s both;">
+            <span class="line-1">Charge Smarter,</span>
+            <span class="line-2">Live Greener</span>
+          </h1>
+          <p style="font-size:var(--size-lead); color:var(--color-text-muted); line-height:1.65; max-width:480px; margin-block-end:var(--space-4); animation: fadeInUp 0.9s ease 0.4s both;">
+            VoltGrid's AI-powered routing ensures you always reach your destination with energy to spare. Intelligent, invisible, effortless.
+          </p>
+
+          <!-- App rating strip -->
+          <div style="display:flex; align-items:center; gap:var(--space-2); margin-block-end:var(--space-4); animation: fadeInUp 0.9s ease 0.5s both;">
+            <div style="display:flex; gap:0.2rem; color:var(--color-accent); font-size:1rem;">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <span style="font-size:var(--size-body); color:var(--color-text-muted);">4.9/5 from <strong style="color:var(--color-text)">48K+ reviews</strong> on App Store & Play Store</span>
+          </div>
+
+          <div style="display:flex; gap:var(--space-2); flex-wrap:wrap; animation: fadeInUp 0.9s ease 0.6s both;">
+            <a href="register.html" class="btn btn-primary btn-lg"><i class="ph ph-user-plus"></i> Get Started Free</a>
+            <a href="#how-it-works" class="btn btn-ghost btn-lg"><i class="ph ph-play-circle"></i> How It Works</a>
+          </div>
+
+          <!-- Trust badges -->
+          <div style="display:flex; gap:var(--space-2); margin-block-start:var(--space-4); flex-wrap:wrap; animation: fadeInUp 0.9s ease 0.8s both;">
+            <div style="display:flex; align-items:center; gap:0.4rem; font-size:var(--size-caption); color:var(--color-text-subtle); font-family:var(--font-mono);">
+              <i class="ph ph-shield-check" style="color:var(--color-primary)"></i> ISO 15118 Certified
+            </div>
+            <div style="display:flex; align-items:center; gap:0.4rem; font-size:var(--size-caption); color:var(--color-text-subtle); font-family:var(--font-mono);">
+              <i class="ph ph-leaf" style="color:var(--color-primary)"></i> 100% Renewable
+            </div>
+            <div style="display:flex; align-items:center; gap:0.4rem; font-size:var(--size-caption); color:var(--color-text-subtle); font-family:var(--font-mono);">
+              <i class="ph ph-lock-simple-open" style="color:var(--color-primary)"></i> GDPR Compliant
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-2-right">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80" alt="Electric vehicle connected to VoltGrid ultra-fast charger at night" loading="eager" />
+        <!-- Floating stat card -->
+        <div style="position:absolute; inset-block-end:var(--space-4); inset-inline-start:var(--space-4); background:var(--color-surface); border:1px solid var(--color-border-glow); border-radius:var(--radius); padding:var(--space-2) var(--space-3); box-shadow:var(--shadow-glow); z-index:2; animation: fadeInUp 1s ease 1s both;">
+          <div style="font-family:var(--font-mono); font-size:0.7rem; color:var(--color-text-subtle); text-transform:uppercase; letter-spacing:0.08em; margin-block-end:0.3rem;">Charging Now</div>
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--color-primary);animation:pulse 2s ease infinite;"></div>
+            <span style="font-family:var(--font-heading); font-size:1rem; color:var(--color-text);">82kW · 47 min remaining</span>
+          </div>
+        </div>
+        <div style="position:absolute; inset-block-start:var(--space-4); inset-inline-end:var(--space-4); background:var(--color-surface); border:1px solid var(--color-border-glow); border-radius:var(--radius); padding:var(--space-2) var(--space-3); box-shadow:var(--shadow-glow); z-index:2; animation: fadeInDown 1s ease 1s both; text-align:center;">
+          <div style="font-family:var(--font-heading); font-size:1.6rem; font-weight:540; background:linear-gradient(135deg,var(--color-primary),var(--color-secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">68%</div>
+          <div style="font-size:var(--size-caption); color:var(--color-text-muted); font-family:var(--font-mono);">Battery Level</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PARTNER LOGOS MARQUEE ── -->
+    <div class="partners-strip">
+      <div class="container">
+        <div style="text-align:center; margin-block-end:var(--space-2); font-family:var(--font-mono); font-size:var(--size-caption); color:var(--color-text-subtle); text-transform:uppercase; letter-spacing:0.1em;">Trusted by Leading Brands</div>
+      </div>
+      <div class="partners-scroll" aria-label="Partner brands">
+        <div class="partner-logo">⚡ Tesla Network</div>
+        <div class="partner-logo">🔋 BMW Group</div>
+        <div class="partner-logo">🚗 Volkswagen AG</div>
+        <div class="partner-logo">🔌 Siemens Energy</div>
+        <div class="partner-logo">🌍 Ionity</div>
+        <div class="partner-logo">🏭 ABB Mobility</div>
+        <div class="partner-logo">⚙️ Eaton Corp</div>
+        <div class="partner-logo">🔆 SunPower</div>
+        <!-- Duplicated for seamless loop -->
+        <div class="partner-logo">⚡ Tesla Network</div>
+        <div class="partner-logo">🔋 BMW Group</div>
+        <div class="partner-logo">🚗 Volkswagen AG</div>
+        <div class="partner-logo">🔌 Siemens Energy</div>
+        <div class="partner-logo">🌍 Ionity</div>
+        <div class="partner-logo">🏭 ABB Mobility</div>
+        <div class="partner-logo">⚙️ Eaton Corp</div>
+        <div class="partner-logo">🔆 SunPower</div>
+      </div>
+    </div>
+
+    <!-- ── MAP SECTION (Interactive Placeholder) ── -->
+    <section class="section map-section-bg" id="map-section" aria-labelledby="map-heading">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">Network Coverage</span>
+          <h2 class="section-heading" id="map-heading">
+            Find Your Nearest <span class="text-gradient">Charging Station</span>
+          </h2>
+          <p class="section-subtext">Explore our global network in real time. Filter by speed, connector type, and availability.</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div style="display:flex; gap:var(--space-1); justify-content:center; flex-wrap:wrap; margin-block-end:var(--space-3);">
+          <button class="btn btn-primary btn-sm" id="filter-all">All Stations</button>
+          <button class="btn btn-ghost btn-sm" id="filter-fast">DC Fast (150kW+)</button>
+          <button class="btn btn-ghost btn-sm" id="filter-ultra">Ultra Fast (350kW)</button>
+          <button class="btn btn-ghost btn-sm" id="filter-free">Available Now</button>
+        </div>
+
+        <div class="map-container reveal">
+          <div class="map-overlay-info">
+            <div class="map-stat"><i class="ph ph-map-pin"></i> 12,847 stations online</div>
+            <div class="map-stat" style="margin-block-start:0.3rem"><i class="ph ph-check-circle"></i> 11,240 available now</div>
+            <div class="map-stat" style="margin-block-start:0.3rem"><i class="ph ph-lightning"></i> 3,200 ultra-fast</div>
+          </div>
+          <!-- Interactive SVG Map Visualization -->
+          <svg viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;opacity:0.7;" aria-label="EV charging station map">
+            <!-- World outline simplified -->
+            <rect width="900" height="480" fill="var(--color-bg-alt)" />
+            <!-- Grid lines -->
+            <g stroke="rgba(10,255,225,0.06)" stroke-width="1">
+              <line x1="150" y1="0" x2="150" y2="480"/><line x1="300" y1="0" x2="300" y2="480"/>
+              <line x1="450" y1="0" x2="450" y2="480"/><line x1="600" y1="0" x2="600" y2="480"/>
+              <line x1="750" y1="0" x2="750" y2="480"/>
+              <line x1="0" y1="120" x2="900" y2="120"/><line x1="0" y1="240" x2="900" y2="240"/>
+              <line x1="0" y1="360" x2="900" y2="360"/>
+            </g>
+            <!-- Station dots — Europe cluster -->
+            <g fill="#0AFFE1">
+              <circle cx="460" cy="150" r="4" opacity="0.9"><animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/></circle>
+              <circle cx="475" cy="165" r="3" opacity="0.7"/>
+              <circle cx="450" cy="170" r="3" opacity="0.8"/>
+              <circle cx="490" cy="145" r="5" opacity="1"><animate attributeName="r" values="4;7;4" dur="3s" repeatCount="indefinite"/></circle>
+              <circle cx="510" cy="155" r="3" opacity="0.6"/>
+              <circle cx="430" cy="160" r="4" opacity="0.8"/>
+              <circle cx="440" cy="180" r="3" opacity="0.7"/>
+              <circle cx="420" cy="145" r="3" opacity="0.6"/>
+              <circle cx="500" cy="175" r="3" opacity="0.7"/>
+            </g>
+            <!-- US cluster -->
+            <g fill="#0AFFE1">
+              <circle cx="180" cy="190" r="5" opacity="0.9"><animate attributeName="r" values="4;6;4" dur="2.5s" repeatCount="indefinite"/></circle>
+              <circle cx="200" cy="205" r="3" opacity="0.7"/>
+              <circle cx="165" cy="210" r="4" opacity="0.8"/>
+              <circle cx="220" cy="195" r="3" opacity="0.6"/>
+              <circle cx="240" cy="185" r="4" opacity="0.8"/>
+              <circle cx="155" cy="195" r="3" opacity="0.7"/>
+              <circle cx="190" cy="220" r="3" opacity="0.6"/>
+            </g>
+            <!-- Asia cluster -->
+            <g fill="#7B2FFF">
+              <circle cx="690" cy="180" r="5" opacity="0.9"><animate attributeName="r" values="4;7;4" dur="3.5s" repeatCount="indefinite"/></circle>
+              <circle cx="710" cy="195" r="3" opacity="0.7"/>
+              <circle cx="675" cy="195" r="4" opacity="0.8"/>
+              <circle cx="720" cy="175" r="3" opacity="0.6"/>
+              <circle cx="695" cy="210" r="3" opacity="0.7"/>
+              <circle cx="660" cy="185" r="3" opacity="0.6"/>
+            </g>
+            <!-- Australia cluster -->
+            <g fill="#FF6B1A">
+              <circle cx="720" cy="340" r="4" opacity="0.8"/>
+              <circle cx="740" cy="355" r="3" opacity="0.7"/>
+              <circle cx="705" cy="350" r="3" opacity="0.6"/>
+            </g>
+            <!-- Connection lines -->
+            <g stroke="rgba(10,255,225,0.12)" stroke-width="1" stroke-dasharray="4 4">
+              <line x1="490" y1="145" x2="690" y2="180"/>
+              <line x1="460" y1="150" x2="200" y2="205"/>
+            </g>
+            <!-- Center label -->
+            <text x="450" y="430" text-anchor="middle" fill="rgba(10,255,225,0.3)" font-family="monospace" font-size="11">
+              VoltGrid Global Network — Live Data
+            </text>
+          </svg>
+        </div>
+
+        <div style="display:flex; gap:var(--space-3); justify-content:center; margin-block-start:var(--space-3); flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:0.4rem; font-size:var(--size-caption); color:var(--color-text-muted);">
+            <div style="width:10px;height:10px;border-radius:50%;background:var(--color-primary);"></div> DC Fast / Ultra-Fast
+          </div>
+          <div style="display:flex; align-items:center; gap:0.4rem; font-size:var(--size-caption); color:var(--color-text-muted);">
+            <div style="width:10px;height:10px;border-radius:50%;background:var(--color-secondary);"></div> AC Level 2
+          </div>
+          <div style="display:flex; align-items:center; gap:0.4rem; font-size:var(--size-caption); color:var(--color-text-muted);">
+            <div style="width:10px;height:10px;border-radius:50%;background:var(--color-accent);"></div> Solar-Powered
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HOW IT WORKS ── -->
+    <section class="section" id="how-it-works" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">Simple Process</span>
+          <h2 class="section-heading" id="how-heading">
+            Charged in <span class="text-gradient">4 Easy Steps</span>
+          </h2>
+          <p class="section-subtext">From arrival to departure — VoltGrid makes every charging session effortless.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-item reveal">
+            <div class="step-num">01</div>
+            <h3 class="step-title">Find a Station</h3>
+            <p class="step-text">Open the VoltGrid app or visit our website. Filter by speed, connector, and current availability in real time.</p>
+          </div>
+          <div class="step-item reveal reveal-delay-1">
+            <div class="step-num">02</div>
+            <h3 class="step-title">Arrive & Plug In</h3>
+            <p class="step-text">Pull into the bay, plug in your cable. Plug & Charge activates automatically — no phone required.</p>
+          </div>
+          <div class="step-item reveal reveal-delay-2">
+            <div class="step-num">03</div>
+            <h3 class="step-title">Charge & Relax</h3>
+            <p class="step-text">Monitor progress on your phone or the station display. Get notified when your target is reached.</p>
+          </div>
+          <div class="step-item reveal reveal-delay-3">
+            <div class="step-num">04</div>
+            <h3 class="step-title">Pay & Go</h3>
+            <p class="step-text">Unplug and drive. Your invoice is emailed instantly. No queues, no cash, zero friction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PRICING ── -->
+    <section class="section features-bg" aria-labelledby="pricing-heading">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">Transparent Pricing</span>
+          <h2 class="section-heading" id="pricing-heading">
+            Plans for Every <span class="text-gradient">Driver & Business</span>
+          </h2>
+          <p class="section-subtext">No hidden fees. Cancel anytime. All plans include free app access and 24/7 support.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card reveal">
+            <div class="pricing-plan-name">Pay As You Go</div>
+            <div class="pricing-amount"><sup>$</sup>0<span>/month</span></div>
+            <p style="font-size:var(--size-body); color:var(--color-text-muted);">Perfect for occasional drivers. No commitment required.</p>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><i class="ph ph-check"></i> Access to all public stations</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> $0.40/kWh standard rate</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> App & Plug & Charge</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> Basic charging history</li>
+              <li class="pricing-feature disabled"><i class="ph ph-x"></i> Priority access</li>
+              <li class="pricing-feature disabled"><i class="ph ph-x"></i> Fleet dashboard</li>
+            </ul>
+            <a href="register.html" class="btn btn-secondary" style="width:100%;margin-block-start:auto;">Get Started</a>
+          </div>
+          <div class="pricing-card featured reveal reveal-delay-1">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-plan-name">VoltPass</div>
+            <div class="pricing-amount"><sup>$</sup>19<span>/month</span></div>
+            <p style="font-size:var(--size-body); color:var(--color-text-muted);">For daily drivers who want significant savings and priority access.</p>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><i class="ph ph-check"></i> $0.28/kWh (30% discount)</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> Priority bay access</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> Advanced route planning</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> Detailed analytics</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> 2 guest passes/month</li>
+              <li class="pricing-feature disabled"><i class="ph ph-x"></i> Fleet dashboard</li>
+            </ul>
+            <a href="register.html" class="btn btn-primary" style="width:100%;margin-block-start:auto;">Start VoltPass</a>
+          </div>
+          <div class="pricing-card reveal reveal-delay-2">
+            <div class="pricing-plan-name">Fleet Pro</div>
+            <div class="pricing-amount"><sup>$</sup>299<span>/month</span></div>
+            <p style="font-size:var(--size-body); color:var(--color-text-muted);">Enterprise-grade charging management for commercial fleets.</p>
+            <ul class="pricing-features">
+              <li class="pricing-feature"><i class="ph ph-check"></i> $0.22/kWh (fleet rate)</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> Full fleet dashboard</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> Smart scheduling & V2G</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> API integration</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> Dedicated account manager</li>
+              <li class="pricing-feature"><i class="ph ph-check"></i> Custom invoicing</li>
+            </ul>
+            <a href="contact.html" class="btn btn-accent" style="width:100%;margin-block-start:auto;">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── BLOG PREVIEW ── -->
+    <section class="section" aria-labelledby="blog-preview-heading">
+      <div class="container">
+        <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:var(--space-2); margin-block-end:var(--space-4);">
+          <div>
+            <span class="section-label" style="justify-content:flex-start;">Latest Insights</span>
+            <h2 class="section-heading" id="blog-preview-heading" style="text-align:start; margin:0;">
+              From the <span class="text-gradient">VoltGrid Lab</span>
+            </h2>
+          </div>
+          <a href="blog.html" class="btn btn-secondary">All Articles <i class="ph ph-arrow-right"></i></a>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card reveal">
+            <div class="blog-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=600&q=80" alt="EV charging infrastructure 2025" class="blog-card-image" loading="lazy" />
+              <span class="blog-card-tag">Technology</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span>Dec 12, 2025</span><span class="blog-meta-sep">·</span><span>6 min read</span></div>
+              <h3 class="blog-card-title">Solid-State Batteries: How They'll Change EV Charging Forever</h3>
+              <p class="blog-card-excerpt">The next generation of battery technology promises 10-minute full charges. We explore what this means for the charging network of tomorrow.</p>
+              <div class="blog-card-footer">
+                <div class="blog-author">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=56&q=80" alt="Alex Kim" class="blog-author-img" loading="lazy" />
+                  <span class="blog-author-name">Alex Kim</span>
+                </div>
+                <a href="blog-single.html" class="service-link" style="font-size:var(--size-caption);">Read <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card reveal reveal-delay-1">
+            <div class="blog-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=600&q=80" alt="Solar and EV charging" class="blog-card-image" loading="lazy" />
+              <span class="blog-card-tag">Sustainability</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span>Nov 28, 2025</span><span class="blog-meta-sep">·</span><span>4 min read</span></div>
+              <h3 class="blog-card-title">V2G Technology: Turn Your EV Into a Mobile Power Plant</h3>
+              <p class="blog-card-excerpt">Vehicle-to-Grid is no longer science fiction. Here's how VoltGrid users are selling power back to the grid and earning money.</p>
+              <div class="blog-card-footer">
+                <div class="blog-author">
+                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=56&q=80" alt="Priya Singh" class="blog-author-img" loading="lazy" />
+                  <span class="blog-author-name">Priya Singh</span>
+                </div>
+                <a href="blog-single.html" class="service-link" style="font-size:var(--size-caption);">Read <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+          <article class="blog-card reveal reveal-delay-2">
+            <div class="blog-card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Electric vehicle on highway" class="blog-card-image" loading="lazy" />
+              <span class="blog-card-tag">Fleet</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-meta"><span>Nov 15, 2025</span><span class="blog-meta-sep">·</span><span>8 min read</span></div>
+              <h3 class="blog-card-title">How DHL Electrified 400 Delivery Vans Using VoltGrid Fleet</h3>
+              <p class="blog-card-excerpt">A deep dive into the real-world numbers behind one of Europe's largest commercial EV fleet transitions.</p>
+              <div class="blog-card-footer">
+                <div class="blog-author">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=56&q=80" alt="Tom Bradley" class="blog-author-img" loading="lazy" />
+                  <span class="blog-author-name">Tom Bradley</span>
+                </div>
+                <a href="blog-single.html" class="service-link" style="font-size:var(--size-caption);">Read <i class="ph ph-arrow-right"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA + NEWSLETTER ── -->
+    <section class="cta-section" aria-labelledby="cta2-heading">
+      <div class="cta-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta-content reveal">
+          <span class="section-label" style="justify-content:center;">Stay in the Loop</span>
+          <h2 class="cta-h2" id="cta2-heading">Get EV Charging <span class="text-gradient">News First</span></h2>
+          <p class="cta-text">Join 120,000+ subscribers for weekly updates on charging technology, industry news, and exclusive VoltGrid offers.</p>
+          <form class="newsletter-form" id="newsletter-form" novalidate aria-label="Newsletter signup">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required id="newsletter-email" aria-label="Email address" />
+            <button type="submit" class="btn btn-primary">Subscribe <i class="ph ph-paper-plane-tilt"></i></button>
+          </form>
+          <div class="form-success" id="newsletter-success" role="alert">
+            <i class="ph ph-check-circle"></i> You're subscribed! Welcome to the VoltGrid community.
+          </div>
+          <p style="margin-block-start:var(--space-1); font-size:var(--size-caption); color:var(--color-text-subtle);">No spam, ever. Unsubscribe with one click.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="VoltGrid Home"><div class="nav-logo-icon"><i class="ph ph-lightning"></i></div><span class="nav-logo-text">VoltGrid</span></a>
+          <p class="footer-desc">The world's most advanced EV charging network. Powering clean mobility across 48 countries.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer-social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About VoltGrid</a></li>
+            <li><a href="services.html" class="footer-link">Our Services</a></li>
+            <li><a href="blog.html" class="footer-link">News & Blog</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="about.html#team" class="footer-link">Leadership Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Solutions</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#service-home" class="footer-link">Home Charging</a></li>
+            <li><a href="services.html#service-dc-fast" class="footer-link">DC Fast Charging</a></li>
+            <li><a href="services.html#service-fleet" class="footer-link">Fleet Management</a></li>
+            <li><a href="services.html#service-solar" class="footer-link">Solar Integration</a></li>
+            <li><a href="services.html#service-business" class="footer-link">Business Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Support</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Help Center</a></li>
+            <li><a href="home2.html#map-section" class="footer-link">Network Status</a></li>
+            <li><a href="contact.html#faq-heading" class="footer-link">Installation Guide</a></li>
+            <li><a href="contact.html" class="footer-link">Technical Support</a></li>
+            <li><a href="contact.html" class="footer-link">24/7 Hotline</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 VoltGrid Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

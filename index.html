@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoltGrid — Premium EV Charging Network</title>
+  <meta name="description" content="VoltGrid is your premium electric vehicle charging network. Find fast chargers, book a slot, and power your journey across 12,000+ charging stations worldwide." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "VoltGrid",
+    "description": "Premium EV Charging Network",
+    "url": "https://voltgrid.ev",
+    "logo": "https://voltgrid.ev/assets/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-800-VOLTGRID",
+      "contactType": "customer support"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="VoltGrid Home">
+          <div class="nav-logo-icon"><i class="ph ph-lightning"></i></div>
+          <span class="nav-logo-text">VoltGrid</span>
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="btn-rtl" aria-label="Toggle RTL direction" title="Toggle text direction">
+            <i class="ph ph-arrows-left-right"></i>
+          </button>
+          <button class="btn-theme" aria-label="Switch to dark mode">
+            <i class="ph ph-moon"></i>
+          </button>
+          <a href="login.html" class="btn-login">Login</a>
+          <button class="btn-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-drawer">
+            <i class="ph ph-list"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Drawer Overlay -->
+  <div class="nav-overlay" role="presentation"></div>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><i class="ph ph-lightning"></i></div>
+        <span class="nav-logo-text">VoltGrid</span>
+      </a>
+      <button class="btn-drawer-close" aria-label="Close navigation menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer-links" aria-label="Mobile navigation">
+      <a href="index.html" class="drawer-link"><i class="ph ph-house"></i> Home</a>
+      <a href="home2.html" class="drawer-link"><i class="ph ph-layout"></i> Home 2</a>
+      <a href="services.html" class="drawer-link"><i class="ph ph-briefcase"></i> Services</a>
+      <a href="about.html" class="drawer-link"><i class="ph ph-info"></i> About</a>
+      <a href="blog.html" class="drawer-link"><i class="ph ph-newspaper"></i> Blog</a>
+      <a href="contact.html" class="drawer-link"><i class="ph ph-envelope"></i> Contact</a>
+      <a href="dashboard.html" class="drawer-link"><i class="ph ph-squares-four"></i> Dashboard</a>
+    </nav>
+    <div class="drawer-footer">
+      <span class="drawer-label">Preferences</span>
+      <div class="drawer-actions">
+        <button class="btn-theme" aria-label="Toggle theme">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="btn-rtl" aria-label="Toggle text direction">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm" style="margin-inline-start: auto;">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MAIN ── -->
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <canvas id="particle-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-gradient" aria-hidden="true"></div>
+
+      <!-- Floating bolt decoration -->
+      <div class="hero-bolt" aria-hidden="true">
+        <svg viewBox="0 0 120 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M70 10L10 100H60L50 170L110 70H60L70 10Z" fill="url(#boltGrad)" />
+          <defs>
+            <linearGradient id="boltGrad" x1="10" y1="10" x2="110" y2="170" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#0AFFE1"/>
+              <stop offset="1" stop-color="#7B2FFF"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse"></span>
+            12,000+ Charging Stations Active
+          </div>
+
+          <h1 class="hero-h1" id="hero-heading">
+            <span class="line-1">The Future of</span>
+            <span class="line-2 typewriter" id="typewriter-headline">Smart EV Charging</span>
+          </h1>
+
+          <p class="hero-lead">
+            Power your electric vehicle anywhere, anytime. VoltGrid connects you to the fastest, most reliable charging network on the planet — from city centers to remote highways.
+          </p>
+
+          <div class="hero-actions">
+            <a href="services.html" class="btn btn-primary btn-lg">
+              <i class="ph ph-lightning-slash"></i>
+              Find a Charger
+            </a>
+            <a href="about.html" class="btn btn-secondary btn-lg">
+              <i class="ph ph-play-circle"></i>
+              Watch Demo
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-num"><span data-count="12000">0</span>+</div>
+              <div class="hero-stat-label">Charging Points</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <div class="hero-stat-num"><span data-count="98">0</span>%</div>
+              <div class="hero-stat-label">Uptime Rate</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <div class="hero-stat-num"><span data-count="340">0</span>kW</div>
+              <div class="hero-stat-label">Max Speed</div>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <div class="hero-stat-num"><span data-count="48">0</span></div>
+              <div class="hero-stat-label">Countries</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
+        <div class="scroll-mouse"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- ── STATS BAR ── -->
+    <section class="stats-bar section-sm" aria-label="Key statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-icon"><i class="ph ph-charging-station"></i></div>
+            <div class="stat-number"><span data-count="2.4">0</span>M+</div>
+            <div class="stat-label">Charges Delivered</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-icon"><i class="ph ph-leaf"></i></div>
+            <div class="stat-number"><span data-count="980">0</span>K</div>
+            <div class="stat-label">Tons CO₂ Avoided</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-icon"><i class="ph ph-users"></i></div>
+            <div class="stat-number"><span data-count="750">0</span>K+</div>
+            <div class="stat-label">Active Drivers</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-icon"><i class="ph ph-star"></i></div>
+            <div class="stat-number"><span data-count="4.9">0</span></div>
+            <div class="stat-label">Average Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICES ── -->
+    <section class="section" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">What We Offer</span>
+          <h2 class="section-heading" id="services-heading">
+            Charging Solutions for <span class="text-gradient">Every Driver</span>
+          </h2>
+          <p class="section-subtext">
+            From home installations to ultra-fast highway chargers, VoltGrid has every charging scenario covered with intelligent, connected technology.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon"><i class="ph ph-house-line"></i></div>
+            <h3 class="service-title">Home Charging</h3>
+            <p class="service-desc">Smart Level 2 chargers for overnight top-ups. Schedule charging during off-peak hours to save on electricity bills.</p>
+            <a href="services.html" class="service-link">Learn more <i class="ph ph-arrow-right"></i></a>
+          </article>
+          <article class="service-card reveal reveal-delay-1">
+            <div class="service-icon"><i class="ph ph-lightning"></i></div>
+            <h3 class="service-title">DC Fast Charging</h3>
+            <p class="service-desc">Recharge 80% in under 20 minutes with our 350kW ultra-fast DC chargers placed at key highway corridors.</p>
+            <a href="services.html" class="service-link">Learn more <i class="ph ph-arrow-right"></i></a>
+          </article>
+          <article class="service-card reveal reveal-delay-2">
+            <div class="service-icon"><i class="ph ph-buildings"></i></div>
+            <h3 class="service-title">Fleet Charging</h3>
+            <p class="service-desc">Manage your entire fleet from one dashboard. Automated scheduling, energy management, and detailed analytics.</p>
+            <a href="services.html" class="service-link">Learn more <i class="ph ph-arrow-right"></i></a>
+          </article>
+          <article class="service-card reveal reveal-delay-3">
+            <div class="service-icon"><i class="ph ph-map-pin"></i></div>
+            <h3 class="service-title">Public Network</h3>
+            <p class="service-desc">Access 12,000+ public charging points worldwide via the VoltGrid app. Pay per kWh with no subscription required.</p>
+            <a href="services.html" class="service-link">Learn more <i class="ph ph-arrow-right"></i></a>
+          </article>
+          <article class="service-card reveal reveal-delay-4">
+            <div class="service-icon"><i class="ph ph-solar-panel"></i></div>
+            <h3 class="service-title">Solar Integration</h3>
+            <p class="service-desc">Pair your VoltGrid charger with solar panels for zero-carbon charging. Intelligent energy routing maximizes self-consumption.</p>
+            <a href="services.html" class="service-link">Learn more <i class="ph ph-arrow-right"></i></a>
+          </article>
+          <article class="service-card reveal reveal-delay-5">
+            <div class="service-icon"><i class="ph ph-wrench"></i></div>
+            <h3 class="service-title">Installation & Support</h3>
+            <p class="service-desc">Professional installation by certified electricians. 24/7 remote monitoring and on-site support guarantee maximum uptime.</p>
+            <a href="services.html" class="service-link">Learn more <i class="ph ph-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ── -->
+    <section class="section features-bg" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap reveal">
+            <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800&q=80" alt="VoltGrid charging station in urban environment" loading="lazy" />
+            <div class="about-badge-float">
+              <div class="num">2018</div>
+              <div class="lbl">Founded</div>
+            </div>
+          </div>
+          <div class="about-content reveal reveal-delay-2">
+            <span class="section-label">Our Mission</span>
+            <h2 class="section-heading" id="about-heading" style="text-align:start">
+              Accelerating the World's <span class="text-gradient">Electric Transition</span>
+            </h2>
+            <p style="color:var(--color-text-muted); line-height:1.75; margin-block-end:var(--space-3)">
+              Founded in 2018, VoltGrid was born with a singular mission: make EV charging as seamless as pulling into a gas station — then make it better. We're building the infrastructure backbone for a zero-emission future.
+            </p>
+            <div class="about-points">
+              <div class="about-point">
+                <div class="about-point-icon"><i class="ph ph-globe-hemisphere-west"></i></div>
+                <div class="about-point-text">
+                  <h4>Global Coverage</h4>
+                  <p>Operating in 48 countries across 6 continents, with aggressive expansion planned for emerging markets.</p>
+                </div>
+              </div>
+              <div class="about-point">
+                <div class="about-point-icon"><i class="ph ph-shield-check"></i></div>
+                <div class="about-point-text">
+                  <h4>Reliability First</h4>
+                  <p>98.6% network uptime backed by real-time monitoring and automated fault detection.</p>
+                </div>
+              </div>
+              <div class="about-point">
+                <div class="about-point-icon"><i class="ph ph-recycle"></i></div>
+                <div class="about-point-text">
+                  <h4>100% Renewable</h4>
+                  <p>All VoltGrid network energy is sourced from certified renewable sources.</p>
+                </div>
+              </div>
+            </div>
+            <div style="margin-block-start:var(--space-3)">
+              <a href="about.html" class="btn btn-primary">Our Full Story <i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FEATURES ── -->
+    <section class="section" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">Why VoltGrid</span>
+          <h2 class="section-heading" id="features-heading">
+            Built for the <span class="text-gradient">Modern Driver</span>
+          </h2>
+          <p class="section-subtext">
+            Every feature designed to eliminate friction and deliver the premium charging experience you deserve.
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-item reveal">
+            <div class="feature-icon"><i class="ph ph-rocket"></i></div>
+            <h3 class="feature-title">Ultra-Fast</h3>
+            <p class="feature-text">Up to 350kW charge rates add 100km of range in under 5 minutes.</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-1">
+            <div class="feature-icon"><i class="ph ph-wifi-high"></i></div>
+            <h3 class="feature-title">Always Connected</h3>
+            <p class="feature-text">Real-time status updates, remote diagnostics, and OTA firmware updates.</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-2">
+            <div class="feature-icon"><i class="ph ph-lock-simple-open"></i></div>
+            <h3 class="feature-title">Plug & Charge</h3>
+            <p class="feature-text">ISO 15118 Plug & Charge — no app, no card, just plug in and go.</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-3">
+            <div class="feature-icon"><i class="ph ph-currency-dollar"></i></div>
+            <h3 class="feature-title">Transparent Pricing</h3>
+            <p class="feature-text">No hidden fees. See exact costs before you charge, billed per kWh.</p>
+          </div>
+          <div class="feature-item reveal">
+            <div class="feature-icon"><i class="ph ph-device-mobile"></i></div>
+            <h3 class="feature-title">Smart App</h3>
+            <p class="feature-text">Plan routes, pre-heat your EV, and monitor charging from anywhere.</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-1">
+            <div class="feature-icon"><i class="ph ph-chart-line-up"></i></div>
+            <h3 class="feature-title">Energy Analytics</h3>
+            <p class="feature-text">Detailed consumption reports, cost tracking, and CO₂ savings dashboard.</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-2">
+            <div class="feature-icon"><i class="ph ph-power"></i></div>
+            <h3 class="feature-title">V2G Ready</h3>
+            <p class="feature-text">Vehicle-to-grid capable hardware lets your car give back to the grid.</p>
+          </div>
+          <div class="feature-item reveal reveal-delay-3">
+            <div class="feature-icon"><i class="ph ph-headset"></i></div>
+            <h3 class="feature-title">24/7 Support</h3>
+            <p class="feature-text">Human support available around the clock, every day of the year.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ── -->
+    <section class="section features-bg testimonials-section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">What Drivers Say</span>
+          <h2 class="section-heading" id="testimonials-heading">
+            Loved by <span class="text-gradient">750,000+ Drivers</span>
+          </h2>
+          <p class="section-subtext">Real stories from the VoltGrid community.</p>
+        </div>
+        <div class="testimonials-carousel">
+          <div class="testimonials-track">
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+              <p class="testimonial-quote">VoltGrid completely changed my EV experience. I used to range-anxiety everywhere. Now I just drive and trust the network will be there.</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=88&q=80" alt="Marcus Chen" class="testimonial-avatar" loading="lazy" />
+                <div>
+                  <div class="testimonial-name">Marcus Chen</div>
+                  <div class="testimonial-role">Tesla Model 3 Owner</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+              <p class="testimonial-quote">The Plug & Charge feature is magic. I pull up, plug in, and it just charges. No fumbling with apps or cards. Absolutely seamless.</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=88&q=80" alt="Sarah Müller" class="testimonial-avatar" loading="lazy" />
+                <div>
+                  <div class="testimonial-name">Sarah Müller</div>
+                  <div class="testimonial-role">Rivian R1T Owner</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+              <p class="testimonial-quote">As a fleet manager with 60 vans, VoltGrid's fleet dashboard is indispensable. Smart scheduling alone saved us 22% on energy costs last quarter.</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=88&q=80" alt="James Okafor" class="testimonial-avatar" loading="lazy" />
+                <div>
+                  <div class="testimonial-name">James Okafor</div>
+                  <div class="testimonial-role">Fleet Manager, DHL</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+              <p class="testimonial-quote">I drove coast to coast in my Model Y using only VoltGrid stations. The route planning in the app routed me perfectly with zero range anxiety.</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=88&q=80" alt="Elena Rodriguez" class="testimonial-avatar" loading="lazy" />
+                <div>
+                  <div class="testimonial-name">Elena Rodriguez</div>
+                  <div class="testimonial-role">Model Y Owner</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+              <p class="testimonial-quote">The solar integration feature is incredible. My home charger syncs with my panels and I charge for free most sunny days. Brilliant engineering.</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=88&q=80" alt="David Park" class="testimonial-avatar" loading="lazy" />
+                <div>
+                  <div class="testimonial-name">David Park</div>
+                  <div class="testimonial-role">Hyundai Ioniq 6 Owner</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+              </div>
+              <p class="testimonial-quote">24/7 support is no joke. Called at 2am when a charger error occurred on a road trip — they resolved it remotely in under 10 minutes. Exceptional.</p>
+              <div class="testimonial-author">
+                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=88&q=80" alt="Aisha Patel" class="testimonial-avatar" loading="lazy" />
+                <div>
+                  <div class="testimonial-name">Aisha Patel</div>
+                  <div class="testimonial-role">BMW iX Owner</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn prev" aria-label="Previous testimonials"><i class="ph ph-caret-left"></i></button>
+          <div class="carousel-dots" role="tablist" aria-label="Carousel navigation"></div>
+          <button class="carousel-btn next" aria-label="Next testimonials"><i class="ph ph-caret-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="cta-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta-content reveal">
+          <span class="section-label" style="justify-content:center">Get Started Today</span>
+          <h2 class="cta-h2" id="cta-heading">
+            Ready to <span class="text-gradient">Plug Into the Future?</span>
+          </h2>
+          <p class="cta-text">
+            Join 750,000+ drivers on the world's most advanced EV charging network. Download the app, find your nearest station, and experience the difference.
+          </p>
+          <div class="cta-actions">
+            <a href="register.html" class="btn btn-primary btn-lg">
+              <i class="ph ph-user-plus"></i>
+              Create Free Account
+            </a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">
+              <i class="ph ph-envelope"></i>
+              Talk to Sales
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="VoltGrid Home">
+            <div class="nav-logo-icon"><i class="ph ph-lightning"></i></div>
+            <span class="nav-logo-text">VoltGrid</span>
+          </a>
+          <p class="footer-desc">The world's most advanced EV charging network. Powering clean mobility across 48 countries.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Twitter"><i class="ph ph-twitter-logo"></i></a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="#" class="footer-social-link" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" class="footer-social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html" class="footer-link">About VoltGrid</a></li>
+            <li><a href="services.html" class="footer-link">Our Services</a></li>
+            <li><a href="blog.html" class="footer-link">News & Blog</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="about.html#team" class="footer-link">Leadership Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Solutions</h3>
+          <ul class="footer-links">
+            <li><a href="services.html#service-home" class="footer-link">Home Charging</a></li>
+            <li><a href="services.html#service-dc-fast" class="footer-link">DC Fast Charging</a></li>
+            <li><a href="services.html#service-fleet" class="footer-link">Fleet Management</a></li>
+            <li><a href="services.html#service-solar" class="footer-link">Solar Integration</a></li>
+            <li><a href="services.html#service-business" class="footer-link">Business Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-col-title">Support</h3>
+          <ul class="footer-links">
+            <li><a href="contact.html" class="footer-link">Help Center</a></li>
+            <li><a href="home2.html#map-section" class="footer-link">Network Status</a></li>
+            <li><a href="contact.html#faq-heading" class="footer-link">Installation Guide</a></li>
+            <li><a href="contact.html" class="footer-link">Technical Support</a></li>
+            <li><a href="contact.html" class="footer-link">24/7 Hotline</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 VoltGrid Inc. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Service</a>
+          <a href="#" class="footer-bottom-link">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
