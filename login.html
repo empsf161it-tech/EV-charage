@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — VoltGrid</title>
+  <meta name="description" content="Sign in to your VoltGrid account to manage your fleet, view charging analytics, and more." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/rtl.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+</head>
+<body>
+  <main class="auth-page">
+    <div class="auth-bg"></div>
+    <div class="auth-card reveal">
+      <div class="auth-logo">
+        <div class="nav-logo-icon" style="width:40px;height:40px;font-size:1.5rem"><i class="ph ph-lightning"></i></div>
+        <span class="nav-logo-text" style="font-size:1.5rem">VoltGrid</span>
+      </div>
+      <h1 class="auth-title">Welcome Back</h1>
+      <p class="auth-subtitle">Sign in to manage your charging network</p>
+      
+      <form class="auth-form" action="index.html" novalidate>
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" class="form-input" placeholder="name@company.com" required />
+          <span class="form-error" role="alert"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="password" class="form-label">Password <span class="required">*</span></label>
+          <input type="password" id="password" class="form-input" placeholder="••••••••" required />
+          <span class="form-error" role="alert"></span>
+        </div>
+        
+        <div style="display:flex;justify-content:space-between;align-items:center;font-size:var(--size-caption);margin-block-start:-0.5rem">
+          <label class="form-checkbox" style="gap:0.5rem">
+            <input type="checkbox" /> Remember me
+          </label>
+          <a href="#" style="color:var(--color-primary);text-decoration:none;font-weight:520">Forgot Password?</a>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" style="width:100%;margin-block-start:var(--space-2)">
+          Sign In
+        </button>
+      </form>
+      
+      <div class="auth-divider">
+        <span>OR</span>
+      </div>
+      
+      <div style="display:flex;flex-direction:column;gap:var(--space-2)">
+        <button class="btn btn-secondary" style="width:100%">
+          <i class="ph ph-google-logo"></i> Sign in with Google
+        </button>
+        <button class="btn btn-secondary" style="width:100%">
+          <i class="ph ph-microsoft-logo"></i> Sign in with Microsoft
+        </button>
+      </div>
+      
+      <p style="text-align:center;margin-block-start:var(--space-4);font-size:var(--size-caption);color:var(--color-text-muted)">
+        Don't have an account? <a href="register.html" style="color:var(--color-primary);font-weight:600;text-decoration:none">Create one</a>
+      </p>
+      
+      <a href="index.html" style="display:block;text-align:center;margin-block-start:var(--space-3);color:var(--color-text-subtle);font-size:var(--size-caption);text-decoration:none">
+        <i class="ph ph-arrow-left"></i> Back to Home
+      </a>
+    </div>
+  </main>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

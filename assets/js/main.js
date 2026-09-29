@@ -701,3 +701,33 @@ document.addEventListener('DOMContentLoaded', () => {
   // Countdown (coming-soon page)
   initCountdown('2027-01-01T00:00:00');
 });
+
+// ============================================================
+// 12. BACK TO TOP BUTTON
+// ============================================================
+const BackToTop = (() => {
+  function init() {
+    const btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.innerHTML = '<i class="ph ph-caret-up"></i>';
+    btn.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        btn.classList.add('show');
+      } else {
+        btn.classList.remove('show');
+      }
+    });
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+  return { init };
+})();
+
+document.addEventListener('DOMContentLoaded', () => {
+  BackToTop.init();
+});
