@@ -13,11 +13,22 @@
 <body>
   <main class="auth-page">
     <div class="auth-bg"></div>
+
+    <!-- Theme & RTL Controls -->
+    <div class="auth-top-actions">
+      <button class="btn-rtl" aria-label="Toggle text direction" title="Toggle RTL direction">
+        <i class="ph ph-arrows-left-right"></i>
+      </button>
+      <button class="btn-theme" aria-label="Toggle color theme" title="Toggle theme">
+        <i class="ph ph-moon"></i>
+      </button>
+    </div>
+
     <div class="auth-card reveal">
-      <div class="auth-logo">
+      <a href="index.html" class="auth-logo" aria-label="VoltGrid Home">
         <div class="nav-logo-icon" style="width:40px;height:40px;font-size:1.5rem"><i class="ph ph-lightning"></i></div>
         <span class="nav-logo-text" style="font-size:1.5rem">VoltGrid</span>
-      </div>
+      </a>
       <h1 class="auth-title">Create Account</h1>
       <p class="auth-subtitle">Join the world's most advanced EV network</p>
       

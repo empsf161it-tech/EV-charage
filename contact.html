@@ -90,16 +90,6 @@
                 <a href="#" class="footer-social-link" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
               </div>
             </div>
-
-            <!-- Map -->
-            <div class="map-placeholder" aria-label="VoltGrid headquarters location map">
-              <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=-122.42%2C37.79%2C-122.40%2C37.80&layer=mapnik"
-                title="VoltGrid HQ Map"
-                loading="lazy"
-                allowfullscreen
-              ></iframe>
-            </div>
           </div>
 
           <!-- Contact Form -->
@@ -159,6 +149,38 @@
             </form>
           </div>
 
+        </div>
+
+        <!-- Full Horizontal Map -->
+        <div class="contact-map-wrap reveal" style="margin-block-start:var(--space-6);">
+          <div class="contact-map-header" style="display:flex;align-items:center;justify-content:space-between;margin-block-end:var(--space-3);flex-wrap:wrap;gap:var(--space-2);">
+            <div>
+              <span class="section-label" style="margin-block-end:0.25rem;">Location</span>
+              <h3 style="font-family:var(--font-heading);font-size:1.3rem;font-weight:520;color:var(--color-text);">
+                Our Global <span class="text-gradient">Headquarters</span>
+              </h3>
+            </div>
+            <a href="https://maps.google.com/?q=580+California+Street+San+Francisco+CA" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="display:inline-flex;align-items:center;gap:0.4rem;">
+              <i class="ph ph-arrow-square-out"></i> Open in Maps
+            </a>
+          </div>
+
+          <div class="map-container" aria-label="VoltGrid headquarters location map" style="width:100%;height:440px;">
+            <div class="map-overlay-info">
+              <div class="map-stat"><i class="ph ph-map-pin" style="color:var(--color-primary)"></i> <strong>VoltGrid HQ</strong></div>
+              <div class="map-stat" style="margin-block-start:0.3rem"><i class="ph ph-buildings"></i> 580 California St, San Francisco, CA</div>
+              <div class="map-stat" style="margin-block-start:0.3rem"><i class="ph ph-clock"></i> Mon–Fri 8am–8pm PST</div>
+            </div>
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-122.42%2C37.79%2C-122.40%2C37.80&layer=mapnik"
+              title="VoltGrid HQ Map"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
